@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LA Elite Pressure Washing | Los Angeles & Beverly Hills</title>
+    <title>Pressure Washing Los Angeles | LA Elite Pressure Washing</title>
     <link rel="icon" type="image/png" sizes="32x32" href="https://i.imgur.com/pf5eaLk.png">
     <link rel="apple-touch-icon" href="https://i.imgur.com/pf5eaLk.png">
-    <meta name="description" content="Professional soft wash and pressure cleaning services in Los Angeles, West Hollywood, and Beverly Hills. Restore your property's curb appeal with surface-appropriate techniques.">
+    <meta name="description" content="Pressure washing and soft wash services in Los Angeles, West Hollywood, Beverly Hills, and Santa Monica. Safe exterior cleaning for homes and businesses. Call (408) 603-6137.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://laelitepressurewashing.com/">
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Pressure Washing in Los Angeles | LA Elite Pressure Washing">
     <meta property="og:description" content="Expert pressure washing and soft washing services in Los Angeles, West Hollywood, Beverly Hills, and Santa Monica. Restore your property's beauty with our safe, professional techniques.">
     <meta property="og:image" content="https://i.imgur.com/YjS9NcE.jpeg">
-    <meta property="og:url" content="https://example.com">
+    <meta property="og:url" content="https://laelitepressurewashing.com/">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
 
@@ -30,14 +32,18 @@
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- NOTE: Replace https://example.com with your real domain -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "HomeAndConstructionBusiness",
+      "@id": "https://laelitepressurewashing.com/#business",
       "name": "LA Elite Pressure Washing",
-      "url": "https://example.com",
+      "url": "https://laelitepressurewashing.com/",
       "telephone": "+14086036137",
+      "image": "https://i.imgur.com/YjS9NcE.jpeg",
+      "sameAs": [
+        "https://www.yelp.com/biz/la-elite-pressure-washing-valley-village"
+      ],
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Los Angeles",
@@ -46,10 +52,34 @@
       "areaServed": [
         "Los Angeles",
         "West Hollywood",
-        "Beverly Hills"
+        "Beverly Hills",
+        "Santa Monica"
       ],
       "priceRange": "$$",
-      "image": "https://i.imgur.com/YjS9NcE.jpeg"
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Cleaning Services",
+        "itemListElement": [
+          {
+            "@type": "Service",
+            "name": "Soft Wash Roof Cleaning",
+            "areaServed": ["Los Angeles", "West Hollywood", "Beverly Hills", "Santa Monica"],
+            "provider": { "@id": "https://laelitepressurewashing.com/#business" }
+          },
+          {
+            "@type": "Service",
+            "name": "Driveway & Concrete Cleaning",
+            "areaServed": ["Los Angeles", "West Hollywood", "Beverly Hills", "Santa Monica"],
+            "provider": { "@id": "https://laelitepressurewashing.com/#business" }
+          },
+          {
+            "@type": "Service",
+            "name": "Full House Wash",
+            "areaServed": ["Los Angeles", "West Hollywood", "Beverly Hills", "Santa Monica"],
+            "provider": { "@id": "https://laelitepressurewashing.com/#business" }
+          }
+        ]
+      }
     }
     </script>
 
@@ -78,7 +108,7 @@
             --hero-text: #1e293b;
         }
 
-        [data-theme="dark"] {
+        body[data-theme="dark"] {
             /* Dark Mode Tokens */
             --bg-body: #0f172a;
             --bg-section-alt: #1e293b;
@@ -221,14 +251,21 @@
             gap: 1rem;
         }
 
-        /* Theme Toggle Switch */
-        .theme-toggle {
+        /* Header Icons & Toggle */
+        .theme-toggle, .yelp-link {
             background: none;
             border: none;
             cursor: pointer;
             color: var(--text-main);
             font-size: 1.25rem;
             padding: 5px;
+            display: flex;
+            align-items: center;
+            transition: color 0.2s;
+        }
+
+        .yelp-link:hover {
+            color: var(--primary);
         }
 
         /* -------------------------------------------------------------------------- */
@@ -252,6 +289,8 @@
             z-index: 2;
             max-width: 650px;
             padding: 4rem 0;
+            margin: 0 auto; /* Added for global centering */
+            text-align: center; /* Added for global centering */
         }
 
         .hero-content h1 {
@@ -266,18 +305,22 @@
             margin-bottom: 2.5rem;
             text-shadow: 0 2px 8px rgba(0,0,0,0.3);
             max-width: 550px;
+            margin-left: auto; /* Added to center block with max-width */
+            margin-right: auto; /* Added to center block with max-width */
         }
 
         .hero-cta {
             display: flex;
             gap: 1.25rem;
             margin-bottom: 3rem;
+            justify-content: center; /* Added for global centering */
         }
 
         .hero-trust {
             display: flex;
             gap: 1.5rem;
             flex-wrap: wrap;
+            justify-content: center; /* Added for global centering */
         }
 
         .hero-trust span {
@@ -574,8 +617,7 @@
             [data-theme="light"] .hero {
                 --hero-overlay: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7));
             }
-            .hero-content { margin: 0 auto; }
-            .hero-cta, .hero-trust { justify-content: center; }
+            /* The specific centering rules here are now redundant but harmless */
         }
 
         @media (max-width: 768px) {
@@ -603,6 +645,9 @@
                     <span>LA Elite Pressure Washing</span>
                 </a>
                 <div class="nav-actions">
+                    <a href="https://www.yelp.com/biz/la-elite-pressure-washing-valley-village" target="_blank" rel="noopener noreferrer" class="yelp-link" aria-label="Visit us on Yelp">
+                        <i class="fa-brands fa-yelp"></i>
+                    </a>
                     <button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark/Light Mode">
                         <i class="fas fa-sun"></i>
                     </button>
@@ -620,7 +665,7 @@
             <div class="container">
                 <div class="hero-content">
                     <h1>Renew Your Home Without Damage.</h1>
-                    <p>Gentle soft-washing and surface-appropriate pressure cleaning for Los Angeles, West Hollywood, and Beverly Hills properties.</p>
+                    <p>Gentle soft-washing and surface-appropriate pressure cleaning for Los Angeles, West Hollywood, Beverly Hills, and Santa Monica properties.</p>
                     <div class="hero-cta">
                         <a href="tel:+14086036137" class="btn btn-primary btn-lg">
                             <i class="fas fa-phone"></i> Call for a Quote
@@ -858,7 +903,7 @@
         <!-- Final CTA -->
         <section class="container" style="padding: 5rem 0; text-align: center;">
             <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Ready to restore your curb appeal?</h2>
-            <p style="margin-bottom: 2.5rem; color: var(--text-muted);">Serving Los Angeles, West Hollywood, and Beverly Hills. Calls answered 7 days a week.</p>
+            <p style="margin-bottom: 2.5rem; color: var(--text-muted);">Serving Los Angeles, West Hollywood, Beverly Hills, and Santa Monica. Calls answered 7 days a week.</p>
             <a href="tel:+14086036137" class="btn btn-primary btn-lg" style="padding: 1.5rem 3rem; font-size: 1.25rem;">
                 <i class="fas fa-phone"></i> Call (408) 603-6137
             </a>
@@ -870,7 +915,12 @@
         <div class="container">
             <div style="margin-bottom: 2rem;">
                 <p><strong>LA Elite Pressure Washing</strong></p>
-                <p>Los Angeles • West Hollywood • Beverly Hills</p>
+                <div style="display: flex; justify-content: center; margin: 0.5rem 0;">
+                    <a href="https://www.yelp.com/biz/la-elite-pressure-washing-valley-village" target="_blank" rel="noopener noreferrer" class="yelp-link" aria-label="Visit us on Yelp">
+                        <i class="fa-brands fa-yelp"></i>
+                    </a>
+                </div>
+                <p>Los Angeles • West Hollywood • Beverly Hills • Santa Monica</p>
             </div>
             <p style="font-size: 0.875rem;">&copy; <span id="year"></span> LA Elite Pressure Washing. All rights reserved.</p>
             <p style="font-size: 0.75rem; margin-top: 1rem;">Disclaimer: Wording such as "damage-free" refers to our use of industry-standard professional techniques intended to preserve surfaces. Results may vary based on surface condition.</p>
